@@ -174,10 +174,11 @@ The plugin starts only these processes, always as argument lists without a shell
 omarchy plugin remove io.github.weppami.glicomy
 ```
 
-This disables the widget and deletes the plugin folder (`~/.config/omarchy/plugins/io.github.weppami.glicomy`). Your data is kept:
+This disables the widget and removes the plugin folder (`~/.config/omarchy/plugins/io.github.weppami.glicomy`). Omarchy keeps a hidden backup copy of it, and your data is kept:
 
 | Survives removal | How to delete it manually |
 |------------------|---------------------------|
+| Omarchy's backup of the plugin folder, `~/.config/omarchy/plugins/.io.github.weppami.glicomy.bak.<timestamp>` | `rm -r` that folder (the exact path is printed by `omarchy plugin remove`) |
 | `~/.local/state/glicomy/state.json` (or under `$XDG_STATE_HOME`) | `rm ~/.local/state/glicomy/state.json` then `rmdir ~/.local/state/glicomy` |
 | Exported reports in `<Documents>/Glicomy/` | Delete the reports you no longer need from a file manager, then `rmdir` the empty folder |
 
