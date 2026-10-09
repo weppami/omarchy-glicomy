@@ -16,8 +16,8 @@ import "components"
 // so a state it could not read is never overwritten.
 Panel {
     id: root
-    moduleName: 'io.github.pgferro.glicomy'
-    ipcTarget: 'io.github.pgferro.glicomy'
+    moduleName: 'io.github.weppami.glicomy'
+    ipcTarget: 'io.github.weppami.glicomy'
     manageIpc: true
     implicitWidth: button.implicitWidth
     implicitHeight: button.implicitHeight

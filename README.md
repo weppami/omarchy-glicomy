@@ -2,6 +2,8 @@
 
 A blood-glucose log in your Omarchy bar. Log finger-stick readings for several people, see each reading's category against the ADA targets, switch between mg/dL and mmol/L, review trends and statistics, and export PDF or CSV reports. Everything stays on your machine; the plugin makes no network requests.
 
+![Glicomy panel: Records, Analysis and Reports tabs](preview.png)
+
 Glicomy is modelled on [omarchy-tensio](https://github.com/juancasanueva/omarchy-tensio), the blood-pressure plugin by Juan Casanueva, and reuses its storage, process and keyboard foundations.
 
 ## Quick path
@@ -9,14 +11,14 @@ Glicomy is modelled on [omarchy-tensio](https://github.com/juancasanueva/omarchy
 1. Add the plugin and enable it in the bar:
 
    ```bash
-   omarchy plugin add https://github.com/pgferro/omarchy-glicomy --enable
+   omarchy plugin add https://github.com/weppami/omarchy-glicomy --enable
    ```
 
    Or add it first and enable it later, choosing a bar section:
 
    ```bash
-   omarchy plugin add https://github.com/pgferro/omarchy-glicomy
-   omarchy plugin enable io.github.pgferro.glicomy --section right
+   omarchy plugin add https://github.com/weppami/omarchy-glicomy
+   omarchy plugin enable io.github.weppami.glicomy --section right
    ```
 
 2. Click the drop in the bar, create a profile, and press **+** to log the first reading.
@@ -135,13 +137,13 @@ Keyboard focus is always visible: the selected reading and the highlighted menu 
 Toggle the panel from a keybinding or script:
 
 ```bash
-omarchy-shell shell toggle io.github.pgferro.glicomy
+omarchy-shell shell toggle io.github.weppami.glicomy
 ```
 
 To bind it in Omarchy, add a line like this to `~/.config/hypr/bindings.lua` (pick a key combination that is still free on your system); Glicomy never edits that file itself:
 
 ```lua
-o.bind("SUPER + CTRL + ALT + G", "Glicomy", "omarchy-shell shell toggle io.github.pgferro.glicomy")
+o.bind("SUPER + CTRL + ALT + G", "Glicomy", "omarchy-shell shell toggle io.github.weppami.glicomy")
 ```
 
 ## Privacy and files
@@ -169,10 +171,10 @@ The plugin starts only these processes, always as argument lists without a shell
 ## Removing
 
 ```bash
-omarchy plugin remove io.github.pgferro.glicomy
+omarchy plugin remove io.github.weppami.glicomy
 ```
 
-This disables the widget and deletes the plugin folder (`~/.config/omarchy/plugins/io.github.pgferro.glicomy`). Your data is kept:
+This disables the widget and deletes the plugin folder (`~/.config/omarchy/plugins/io.github.weppami.glicomy`). Your data is kept:
 
 | Survives removal | How to delete it manually |
 |------------------|---------------------------|
