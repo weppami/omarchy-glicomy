@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.pgferro.glicomy",
+  "name": "Glicomy",
+  "version": "1.0.0",
+  "author": "pgferro",
+  "license": "MIT",
+  "homepage": "https://github.com/pgferro/omarchy-glicomy",
+  "description": "Blood-glucose log for several people: readings in mg/dL or mmol/L checked against ADA targets before and after meals, 7/30-day charts and statistics, and PDF/CSV reports. Stores everything locally, no network access.",
+  "keywords": ["health", "diabetes", "glucose", "blood sugar", "log", "report"],
+  "kinds": ["bar-widget"],
+  "entryPoints": {"barWidget": "Panel.qml"},
+  "barWidget": {
+    "displayName": "Glicomy",
+    "description": "Last glucose reading in the bar; click to log readings, review analysis and export reports.",
+    "category": "Health",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}
